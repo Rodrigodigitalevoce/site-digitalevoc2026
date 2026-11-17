@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundação Digitalevoce — Rodrigo Rodrigues</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0a',
+                        cardBg: '#121212',
+                        goldPrimary: '#d4af37',
+                        goldHover: '#f3e5ab',
+                        goldDark: '#aa8c2c'
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa8c2c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+        }
+        /* Animações de Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 font-sans antialiased selection:bg-goldPrimary selection:text-black">
+
+    <!-- CABEÇALHO FIXO -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-darkBg/90 backdrop-blur-md border-b gold-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-xl sm:text-2xl font-bold tracking-wider gold-gradient-text">
+                Fundação Digitalevoce <span class="text-xs block text-gray-400 font-sans tracking-normal">Rodrigo Rodrigues</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-goldPrimary transition-colors">Início</a>
+                
+                <!-- Dropdown Livraria -->
+                <div class="relative group py-4">
+                    <button class="hover:text-goldPrimary transition-colors flex items-center gap-1">
+                        Livraria <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="absolute top-full left-0 w-72 bg-cardBg border gold-border rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 p-2 max-h-80 overflow-y-auto">
+                        <a href="https://loja.uiclap.com/titulo/ua176939" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 01: Matemática do Lucro</a>
+                        <a href="https://loja.uiclap.com/titulo/ua165818" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 02: Emoção Versus Espiritualidade</a>
+                        <a href="https://loja.uiclap.com/titulo/ua156972" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 03: Contratos Invisíveis</a>
+                        <a href="https://loja.uiclap.com/titulo/ua159630" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 04: Contratos Invisíveis Além dos Fios</a>
+                        <a href="https://loja.uiclap.com/titulo/ua154730" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 05: Marionete Nunca Mais</a>
+                        <a href="https://loja.uiclap.com/titulo/ua152027" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 06: O Trono Vazio</a>
+                        <a href="https://loja.uiclap.com/titulo/ua151705" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 07: Os Códigos do Governo</a>
+                        <a href="https://loja.uiclap.com/titulo/ua150014" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 08: Códigos do Governo para Prosperidade</a>
+                        <a href="https://loja.uiclap.com/titulo/ua148737" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 09: Mais Esperto Que Você Mesmo</a>
+                        <a href="https://loja.uiclap.com/titulo/ua150744" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 10: O Fim da Dependência</a>
+                        <a href="https://loja.uiclap.com/titulo/ua149636" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Livro 11: Quando Você Decide, o Milagre Começa</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Cursos -->
+                <div class="relative group py-4">
+                    <a href="https://pay.kiwify.com.br/tmS58qA" target="_blank" class="hover:text-goldPrimary transition-colors flex items-center gap-1">
+                        Cursos <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="absolute top-full left-0 w-56 bg-cardBg border gold-border rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 p-2">
+                        <a href="https://pay.kiwify.com.br/tmS58qA" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Cursos Online</a>
+                        <a href="https://pay.kiwify.com.br/tmS58qA" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Cursos Presenciais</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Mentorias -->
+                <div class="relative group py-4">
+                    <button class="hover:text-goldPrimary transition-colors flex items-center gap-1">
+                        Mentorias <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="absolute top-full left-0 w-60 bg-cardBg border gold-border rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 p-2">
+                        <a href="https://pay.kiwify.com.br/FEDhNzD" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Mentoria Principal</a>
+                        <a href="https://pay.kiwify.com.br/2GOVM1V" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Mentoria RVI</a>
+                        <a href="https://pay.kiwify.com.br/x3lX60M" target="_blank" class="block px-4 py-2 text-xs text-gray-300 hover:text-black hover:bg-goldPrimary rounded-lg transition-colors">Matemática do Lucro (Opções)</a>
+                    </div>
+                </div>
+
+                <a href="#sobre" class="hover:text-goldPrimary transition-colors">Sobre</a>
+                <a href="#minicurso" class="hover:text-goldPrimary transition-colors">Minicurso Gratuito</a>
+                <a href="#contato" class="hover:text-goldPrimary transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão de Destaque Topo -->
+            <div class="hidden lg:block">
+                <a href="https://pay.kiwify.com.br/FEDhNzD" target="_blank" class="bg-gradient-to-r from-goldPrimary to-goldDark text-black font-bold px-6 py-2.5 rounded-xl shadow-lg hover:opacity-90 transition-all text-sm">
+                    Garantir Mentoria
+                </a>
+            </div>
+
+            <!-- Botão Menu Mobile Toggle -->
+            <button id="menu-btn" class="lg:hidden text-goldPrimary focus:outline-none p-2">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-cardBg border-b gold-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-sm hover:text-goldPrimary">Início</a>
+            <a href="#livros" class="block py-2 text-sm hover:text-goldPrimary">Livraria (11 Livros)</a>
+            <a href="https://pay.kiwify.com.br/tmS58qA" target="_blank" class="block py-2 text-sm hover:text-goldPrimary">Cursos Online e Presenciais</a>
+            <a href="https://pay.kiwify.com.br/FEDhNzD" target="_blank" class="block py-2 text-sm hover:text-goldPrimary">Mentoria Completa</a>
+            <a href="https://pay.kiwify.com.br/2GOVM1V" target="_blank" class="block py-2 text-sm hover:text-goldPrimary">Mentoria RVI</a>
+            <a href="#sobre" class="block py-2 text-sm hover:text-goldPrimary">Sobre Rodrigo Rodrigues</a>
+            <a href="#minicurso" class="block py-2 text-sm hover:text-goldPrimary">Minicurso Gratuito</a>
+            <a href="#contato" class="block py-2 text-sm hover:text-goldPrimary">Contato & Grupo O Fim da Sobrevivência</a>
+            <div class="pt-2">
+                <a href="https://pay.kiwify.com.br/FEDhNzD" target="_blank" class="block text-center bg-gradient-to-r from-goldPrimary to-goldDark text-black font-bold py-3 rounded-xl">
+                    Garantir Mentoria
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRIMEIRA DOBRA / APRESENTAÇÃO PRINCIPAL -->
+    <section id="inicio" class="pt-32 pb-20 lg:pt-40 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+        <div class="flex-1 text-center lg:text-left reveal">
+            <span class="text-xs uppercase tracking-widest text-goldPrimary font-semibold px-3 py-1 bg-goldPrimary/10 rounded-full border gold-border">Fundação Digitalevoce</span>
+            <h1 class="text-4xl sm:text-6xl font-serif font-extrabold mt-6 leading-tight">
+                Assuma o Governo da <span class="gold-gradient-text">Sua Realidade</span>
+            </h1>
+            <p class="mt-6 text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                Desenvolvimento pessoal, mentalidade de alta performance e investimentos práticos baseados em clareza emocional e resultados reais.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <a href="https://pay.kiwify.com.br/FEDhNzD" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-goldPrimary to-goldDark text-black font-bold px-8 py-4 rounded-xl shadow-lg gold-glow text-center transition-all">
+                    Conhecer a Mentoria Principal
+                </a>
+                <a href="#livros" class="w-full sm:w-auto border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold px-8 py-4 rounded-xl text-center transition-all">
+                    Explorar os Livros
+                </a>
+            </div>
+        </div>
+        <div class="flex-1 w-full max-w-lg reveal">
+            <div class="relative rounded-2xl overflow-hidden border-2 gold-border shadow-2xl bg-cardBg aspect-[4/3] flex items-center justify-center">
+                <!-- Certifique-se de subir o arquivo foto-autor.jpg no seu repositório GitHub -->
+                <img src="foto-autor.jpg" alt="Rodrigo Rodrigues" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hidden flex-col items-center justify-center p-6 text-center">
+                    <span class="font-serif text-goldPrimary text-xl font-bold">Rodrigo Rodrigues</span>
+                    <span class="text-xs text-gray-400 mt-2">Fundação Digitalevoce</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER / SEGUNDA IMAGEM DESTAQUE -->
+    <section class="py-12 bg-cardBg border-y gold-border reveal">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-serif font-bold mb-6 gold-gradient-text">Nova Fase: Mentalidade Financeira</h2>
+            <div class="rounded-2xl overflow-hidden border gold-border shadow-2xl max-w-4xl mx-auto">
+                <!-- Certifique-se de subir o arquivo nova-fase-mentalidade.jpg no seu repositório GitHub -->
+                <a href="https://pay.kiwify.com.br/2GOVM1V" target="_blank">
+                    <img src="nova-fase-mentalidade.jpg" alt="Nova Fase Mentalidade Financeira" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.parentElement.innerHTML='<div class=\'p-12 text-center bg-darkBg text-goldPrimary font-serif text-lg\'>Mentoria RVI (Renda Vitalícia com Investimentos) — Clique para Acessar</div>';">
+                </a>
+            </div>
+            <div class="mt-8">
+                <a href="https://pay.kiwify.com.br/2GOVM1V" target="_blank" class="inline-block bg-goldPrimary text-black font-bold px-8 py-3 rounded-xl hover:bg-goldHover transition-all">
+                    Conhecer Mentoria RVI
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- APRESENTAÇÃO DO AUTOR -->
+    <section id="sobre" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal">
+            <div class="rounded-2xl overflow-hidden border gold-border shadow-2xl aspect-[4/3] flex items-center justify-center bg-cardBg">
+                <img src="foto-autor.jpg" alt="Rodrigo Rodrigues História" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hidden text-center p-6 text-goldPrimary font-serif">Rodrigo Rodrigues</div>
+            </div>
+            <div>
+                <span class="text-xs uppercase tracking-widest text-goldPrimary font-semibold">Trajetória e Superação</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2">Sobre Rodrigo Rodrigues</h2>
+                <p class="mt-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+                    Minha trajetória começou a ser moldada a partir de 27/07/2002, quando sofri um grave acidente e enfrentei a dura realidade da hemiplegia à esquerda. Vivenciei a dor profunda de não conseguir fazer mais as mesmas coisas, a adaptação forçada e a desconstrução dolorosa de tudo o que eu conhecia havia 21 anos, abrindo espaço para viver o novo e o desconhecido.
+                </p>
+                <p class="mt-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+                    Em 2005, formei-me em Nutrição. Em 10/04/2007, entrei no Banco sem mandar currículo específico, apenas cumprindo meu papel. Em 2008, comprei meu carro à vista com meus primeiros resultados em investimentos em Fundos de Ações Blue Chips. Em 2012, ingressei em Administração de Empresas na Universidade Cruzeiro do Sul e, em 2018, em Ciências Econômicas, consolidando uma jornada sólida de superação, autoconhecimento e educação financeira.
+                </p>
+                <div class="mt-8">
+                    <a href="#contato" class="inline-flex items-center gap-2 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold px-6 py-3 rounded-xl transition-all">
+                        Conheça Minha História
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO E PILARES -->
+    <section class="py-20 bg-cardBg/50 border-y gold-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto reveal">
+                <h2 class="text-3xl font-serif font-bold">Pilares da Fundação</h2>
+                <p class="mt-4 text-gray-400 text-sm">Direcionamento estruturado para transformar a sua relação com o conhecimento e com o capital.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <div class="bg-cardBg border gold-border p-8 rounded-2xl reveal">
+                    <div class="w-12 h-12 rounded-xl bg-goldPrimary/10 border gold-border flex items-center justify-center text-goldPrimary mb-6 font-serif font-bold text-xl">01</div>
+                    <h3 class="font-serif font-bold text-xl text-white">Autoconhecimento e Mente</h3>
+                    <p class="mt-4 text-gray-400 text-sm leading-relaxed">Desarme o seu sistema de sobrevivência subconsciente e assuma o governo real das suas decisões diárias.</p>
+                    <a href="#contato" class="mt-6 inline-block text-goldPrimary text-sm font-semibold hover:underline">Saiba Mais →</a>
+                </div>
+                <div class="bg-cardBg border gold-border p-8 rounded-2xl reveal">
+                    <div class="w-12 h-12 rounded-xl bg-goldPrimary/10 border gold-border flex items-center justify-center text-goldPrimary mb-6 font-serif font-bold text-xl">02</div>
+                    <h3 class="font-serif font-bold text-xl text-white">Investimentos Práticos</h3>
+                    <p class="mt-4 text-gray-400 text-sm leading-relaxed">Aprenda estratégias reais na bolsa de valores, operações com opções e construção de renda de forma segura e consistente.</p>
+                    <a href="https://pay.kiwify.com.br/x3lX60M" target="_blank" class="mt-6 inline-block text-goldPrimary text-sm font-semibold hover:underline">Saiba Mais →</a>
+                </div>
+                <div class="bg-cardBg border gold-border p-8 rounded-2xl reveal">
+                    <div class="w-12 h-12 rounded-xl bg-goldPrimary/10 border gold-border flex items-center justify-center text-goldPrimary mb-6 font-serif font-bold text-xl">03</div>
+                    <h3 class="font-serif font-bold text-xl text-white">Literatura e Obras</h3>
+                    <p class="mt-4 text-gray-400 text-sm leading-relaxed">Catálogo completo de livros publicados sobre contratos invisíveis, prosperidade, mentalidade e superação.</p>
+                    <a href="#livros" class="mt-6 inline-block text-goldPrimary text-sm font-semibold hover:underline">Saiba Mais →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORIAS EM DESTAQUE -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto reveal">
+            <span class="text-xs uppercase tracking-widest text-goldPrimary font-semibold">Programas Oficiais</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2">Mentorias Especializadas</h2>
+            <p class="mt-4 text-gray-400">Escolha o nível de acompanhamento ideal para acelerar os seus resultados.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <!-- Mentoria Completa -->
+            <div class="bg-cardBg border-2 gold-border p-8 rounded-2xl flex flex-col justify-between reveal gold-glow">
+                <div>
+                    <span class="text-xs text-goldPrimary font-semibold uppercase tracking-wider">Principal</span>
+                    <h3 class="font-serif font-bold text-2xl mt-2 text-white">Mentoria Completa</h3>
+                    <p class="mt-4 text-gray-300 text-sm leading-relaxed">Acompanhamento imersivo focado em reestruturação mental e financeira profunda.</p>
+                    <ul class="mt-6 space-y-3 text-xs text-gray-300">
+                        <li class="flex items-center gap-2">✓ Encontros e mentorias diretas</li>
+                        <li class="flex items-center gap-2">✓ Ferramentas de inteligência emocional</li>
+                        <li class="flex items-center gap-2">✓ Grupo exclusivo de acompanhamento</li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="https://pay.kiwify.com.br/FEDhNzD" target="_blank" class="block text-center bg-gradient-to-r from-goldPrimary to-goldDark text-black font-bold py-3 rounded-xl hover:opacity-90 transition-all text-sm">
+                        Conhecer Mentoria
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mentoria RVI -->
+            <div class="bg-cardBg border gold-border p-8 rounded-2xl flex flex-col justify-between reveal">
+                <div>
+                    <span class="text-xs text-goldPrimary font-semibold uppercase tracking-wider">Estratégica</span>
+                    <h3 class="font-serif font-bold text-2xl mt-2 text-white">Mentoria RVI</h3>
+                    <p class="mt-4 text-gray-300 text-sm leading-relaxed">Renda Vitalícia com Investimentos. Metodologia prática para gerar fluxo e consistência.</p>
+                    <ul class="mt-6 space-y-3 text-xs text-gray-300">
+                        <li class="flex items-center gap-2">✓ Alocação em ativos sólidos</li>
+                        <li class="flex items-center gap-2">✓ Gestão de risco profissional</li>
+                        <li class="flex items-center gap-2">✓ Visão de longo prazo</li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="https://pay.kiwify.com.br/2GOVM1V" target="_blank" class="block text-center border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-3 rounded-xl transition-all text-sm">
+                        Conhecer Mentoria RVI
+                    </a>
+                </div>
+            </div>
+
+            <!-- Matemática do Lucro -->
+            <div class="bg-cardBg border gold-border p-8 rounded-2xl flex flex-col justify-between reveal">
+                <div>
+                    <span class="text-xs text-goldPrimary font-semibold uppercase tracking-wider">Técnica</span>
+                    <h3 class="font-serif font-bold text-2xl mt-2 text-white">Matemática do Lucro</h3>
+                    <p class="mt-4 text-gray-300 text-sm leading-relaxed">O método de renda passiva com opções na prática, direto ao ponto e com resultados reais.</p>
+                    <ul class="mt-6 space-y-3 text-xs text-gray-300">
+                        <li class="flex items-center gap-2">✓ Operações com opções</li>
+                        <li class="flex items-center gap-2">✓ Identificação de oportunidades</li>
+                        <li class="flex items-center gap-2">✓ Prática sem enrolação</li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="https://pay.kiwify.com.br/x3lX60M" target="_blank" class="block text-center border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-3 rounded-xl transition-all text-sm">
+                        Conhecer O Módulo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURSOS ONLINE E PRESENCIAIS -->
+    <section class="py-16 bg-cardBg/40 border-y gold-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h2 class="text-3xl font-serif font-bold">Cursos Online e Presenciais</h2>
+            <p class="mt-4 text-gray-400 max-w-xl mx-auto text-sm">Amplie seus horizontes com treinamentos estruturados para formação e capacitação contínua.</p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="https://pay.kiwify.com.br/tmS58qA" target="_blank" class="bg-goldPrimary text-black font-bold px-8 py-3.5 rounded-xl hover:bg-goldHover transition-all text-sm">
+                    Ver Cursos Online
+                </a>
+                <a href="https://pay.kiwify.com.br/tmS58qA" target="_blank" class="border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold px-8 py-3.5 rounded-xl transition-all text-sm">
+                    Ver Agenda Presencial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVRARIA COM 11 LIVROS -->
+    <section id="livros" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="text-xs uppercase tracking-widest text-goldPrimary font-semibold">Obras Publicadas</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-2">Livraria Oficial</h2>
+            <p class="mt-4 text-gray-400 text-sm">Livros escritos para desarmar o sistema de sobrevivência e elevar sua consciência financeira e espiritual.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            <!-- Livro 1 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Matemática do Lucro</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Matemática do Lucro</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Estratégias práticas e fundamentos essenciais para operar com segurança.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua176939" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 2 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Emoção Versus Espiritualidade</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Emoção Versus Espiritualidade</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Compreenda o embate interno entre reações emocionais e o despertar espiritual.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua165818" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 3 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Contratos Invisíveis</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Contratos Invisíveis</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Descubra os acordos mentais ocultos que moldam e limitam a sua realidade.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua156972" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 4 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Contratos Invisíveis Além dos Fios</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Contratos Invisíveis Além dos Fios que te Prendem</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Rompendo amarras profundas e crenças limitantes invisíveis.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua159630" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 5 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Marionete Nunca Mais</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Marionete Nunca Mais</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Pare de ser conduzido por padrões automáticos e assuma o controle.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua154730" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 6 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">O Trono Vazio</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">O Trono Vazio</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Quem está governando as suas decisões e o seu destino atual?</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua152027" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 7 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Os Códigos do Governo</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Os Códigos do Governo</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Instruções essenciais para governar a própria mente e realidade.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua151705" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 8 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Códigos do Governo para Prosperidade</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Códigos do Governo para Prosperidade</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Alinhando mentalidade e prosperidade financeira sustentável.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua150014" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 9 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Mais Esperto Que Você Mesmo</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Mais Esperto Que Você Mesmo</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Como desarmar o seu sistema de sobrevivência e assumir o governo.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua148737" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 10 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">O Fim da Dependência</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Mais Esperto do que Você Mesmo Vol. 2: O Fim da Dependência</h3>
+                    <p class="mt-2 text-gray-400 text-xs">Volume 2 da série sobre libertação de padrões limitantes.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua150744" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livro 11 -->
+            <div class="bg-cardBg border gold-border rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="h-48 rounded-xl bg-darkBg border gold-border flex items-center justify-center text-center p-4 mb-4">
+                        <span class="font-serif text-goldPrimary text-sm font-bold">Quando Você Decide, o Milagre Começa</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white">Quando Você Decide, o Milagre Começa</h3>
+                    <p class="mt-2 text-gray-400 text-xs">O poder de uma decisão firme na virada de chave da realidade.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://loja.uiclap.com/titulo/ua149636" target="_blank" class="block text-center bg-goldPrimary/10 border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold py-2.5 rounded-xl transition-all text-xs">
+                        Conhecer o Livro
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINICURSO GRATUITO INTEGRADO & DEPOIMENTO DO BRUNO -->
+    <section id="minicurso" class="py-20 bg-cardBg/50 border-y gold-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto reveal">
+                <span class="text-xs uppercase tracking-widest text-goldPrimary font-semibold">Conteúdo Gratuito</span>
+                <h2 class="text-3xl font-serif font-bold mt-2">Minicurso e Experiências Reais</h2>
+                <p class="mt-4 text-gray-400 text-sm">Assista ao conteúdo introdutório gratuito e veja o depoimento de quem já aplica o método na prática.</p>
+            </div>
+
+            <!-- Player do Vídeo do Bruno -->
+            <div class="mt-12 max-w-3xl mx-auto rounded-2xl overflow-hidden border gold-border shadow-2xl bg-darkBg reveal">
+                <div class="relative pb-[56.9%]" style="position: relative; padding-bottom: 56.25%; height: 0;">
+                    <iframe src="https://www.youtube.com/embed/XiDGVVSWu_8" title="Depoimento Bruno - YouTube" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen></iframe>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-serif font-bold text-lg text-white">Depoimento Oficial — Bruno</h3>
+                    <p class="mt-2 text-xs text-gray-400">Como identificar boas oportunidades, investir no longo prazo e obter resultados exponenciais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAMADA FINAL -->
+    <section class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold leading-tight">Dê o Próximo Passo na Sua Jornada</h2>
+        <p class="mt-6 text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+            Entre para a comunidade, participe do grupo no WhatsApp e tenha acesso direto aos conteúdos de mentalidade e estratégias na prática.
+        </p>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="https://chat.whatsapp.com/B71AbHE2B5h4zqD56rzUAw" target="_blank" class="bg-gradient-to-r from-goldPrimary to-goldDark text-black font-bold px-8 py-4 rounded-xl shadow-lg gold-glow transition-all">
+                Entrar no Grupo O Fim da Sobrevivência
+            </a>
+            <a href="https://pay.kiwify.com.br/FEDhNzD" target="_blank" class="border gold-border text-goldPrimary hover:bg-goldPrimary hover:text-black font-semibold px-8 py-4 rounded-xl transition-all">
+                Garantir Mentoria Principal
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTATO E RODAPÉ -->
+    <footer id="contato" class="bg-cardBg border-t gold-border pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="font-serif font-bold text-lg text-goldPrimary">Fundação Digitalevoce</h3>
+                <p class="mt-4 text-xs text-gray-400 leading-relaxed">
+                    Transformando a mentalidade financeira e o autoconhecimento através de métodos práticos e reais.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-sm text-white mb-4">Navegação</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><a href="#inicio" class="hover:text-goldPrimary">Início</a></li>
+                    <li><a href="#livros" class="hover:text-goldPrimary">Livraria</a></li>
+                    <li><a href="https://pay.kiwify.com.br/tmS58qA" target="_blank" class="hover:text-goldPrimary">Cursos Online e Presenciais</a></li>
+                    <li><a href="#sobre" class="hover:text-goldPrimary">Sobre o Autor</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-sm text-white mb-4">Comunidade & WhatsApp</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><a href="https://chat.whatsapp.com/B71AbHE2B5h4zqD56rzUAw" target="_blank" class="hover:text-goldPrimary">Grupo O Fim da Sobrevivência</a></li>
+                    <li><a href="https://pay.kiwify.com.br/FEDhNzD" target="_blank" class="hover:text-goldPrimary">Mentoria Principal</a></li>
+                    <li><a href="https://pay.kiwify.com.br/2GOVM1V" target="_blank" class="hover:text-goldPrimary">Mentoria RVI</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-sm text-white mb-4">Contato & Redes</h4>
+                <p class="text-xs text-gray-400 mb-2">E-mail: contato@digitalevoce.com.br</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://chat.whatsapp.com/B71AbHE2B5h4zqD56rzUAw" target="_blank" class="text-goldPrimary hover:text-white text-xs font-semibold">WhatsApp</a>
+                    <a href="https://www.youtube.com/@digotraderpro" target="_blank" class="text-goldPrimary hover:text-white text-xs font-semibold">YouTube</a>
+                    <a href="https://instagram.com/digotraderpro" target="_blank" class="text-goldPrimary hover:text-white text-xs font-semibold">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+            <p>© 2026 Fundação Digitalevoce — Rodrigo Rodrigues. Todos os direitos reservados.</p>
+            <div class="flex space-x-6 mt-4 sm:mt-0">
+                <a href="#" class="hover:text-goldPrimary">Política de Privacidade</a>
+                <a href="#" class="hover:text-goldPrimary">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de Animação ao Rolar (Scroll Reveal) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+            
+            function revealOnScroll() {
+                for (let i = 0; i < reveals.length; i++) {
+                    let windowHeight = window.innerHeight;
+                    let elementTop = reveals[i].getBoundingClientRect().top;
+                    let elementVisible = 100;
+                    
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                    }
+                }
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Executa ao carregar para mostrar os elementos iniciais
+
+            // Toggle Menu Mobile
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
